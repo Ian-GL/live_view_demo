@@ -11,7 +11,7 @@ use Mix.Config
 # before starting your production server.
 config :live_view_demo, LiveViewDemoWeb.Endpoint,
   load_from_system_env: true,
-  url: [scheme: "https", host: "murmuring-crag-40149", port: 443],
+  url: [scheme: "https", host: "murmuring-crag-40149", port: {:system, "PORT"}],
   force_ssl: [rewrite_on: [:x_forwarded_proto]],
   cache_static_manifest: "priv/static/cache_manifest.json",
   secret_key_base: Map.fetch!(System.get_env(), "SECRET_KEY_BASE")
