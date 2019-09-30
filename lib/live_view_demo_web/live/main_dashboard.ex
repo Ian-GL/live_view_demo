@@ -51,7 +51,11 @@ defmodule LiveViewDemoWeb.MainDashboard do
       <div class="final-p extended-paragraph-container">
         <h2>What's next?</h2>
         <p>
-          Building this was very fun and exciting. A lot of "it feels like cheating" moments.
+          Building this was very fun and exciting. There were many "it feels
+          like cheating" moments, followed by others banging head to the wall
+          ones, but the latest were only a few. Although this is not that
+          interactive I hope it does exemplify how a common scenario can be
+          handled with LiveView. If you find this useful, please let me know.
         </p>
         <p>
           Find it interesting? Check out

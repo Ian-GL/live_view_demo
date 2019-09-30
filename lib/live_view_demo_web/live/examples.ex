@@ -8,32 +8,40 @@ defmodule LiveViewDemoWeb.Examples do
     ~L"""
     <div class="mainBG flex-one centerItems avoid-header">
       <div>
-        <h2>You can start building a chart by selecting the type<h2>
+        <h2>Here you can see a couple of chart examples<h2>
       </div>
-      <div>
-        <svg
-          viewBox="0 0 200 110"
-          style="margin-top: 50px;"
-          height="300"
-          width="450"
-        >
-          <line stroke="#595454" x1="30" x2="30" y2="90"></line>
-          <line stroke="#595454" y1="90" y2="90" x1="30" x2="200"></line>
-          <%= generate_y_ticks(@bar_highest_value) %>
-          <%= generate_chart_bars(@bar_chart_data) %>
-        </svg>
-      </div>
-      <div>
-      </div>
-      <div>
-        <svg
-          viewBox="-100 -100 200 200"
-          style="margin-top: 50px;"
-          height="250"
-          width="250"
-        >
-          <%= generate_chart_slices(@pie_chart_data) %>
-        </svg>
+      <div class="display-flex row">
+        <div>
+          <h4 class="no-vertical-margin">
+            Users with most total expenditure
+          </h4>
+          <svg
+            viewBox="0 0 200 110"
+            style="margin-top: 50px;"
+            height="300"
+            width="450"
+          >
+            <line stroke="#595454" x1="30" x2="30" y2="90"></line>
+            <line stroke="#595454" y1="90" y2="90" x1="30" x2="200"></line>
+            <%= generate_y_ticks(@bar_highest_value) %>
+            <%= generate_chart_bars(@bar_chart_data) %>
+          </svg>
+        </div>
+        <div>
+        </div>
+        <div class="examples-margin">
+          <h4 class="no-vertical-margin">
+            Distribution of orders by status
+          </h4>
+          <svg
+            viewBox="-100 -100 200 200"
+            style="margin-top: 50px;"
+            height="250"
+            width="250"
+          >
+            <%= generate_chart_slices(@pie_chart_data) %>
+          </svg>
+        </div>
       </div>
     </div>
     """

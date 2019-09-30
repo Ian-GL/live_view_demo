@@ -8,9 +8,7 @@ defmodule LiveViewDemoWeb.Chart do
 
   @chart_type_options [
     {"Pie", :pie},
-    {"Bar", :bar},
-    {"Line", :line},
-    {"Scattered", :scattered}
+    {"Bar", :bar}
   ]
 
   @initial_assigns [
@@ -96,7 +94,6 @@ defmodule LiveViewDemoWeb.Chart do
       end
 
     new_assigns = [pie_column: pie_column, chart_data: chart_data, error: error]
-    |> IO.inspect()
     {:noreply, assign(socket, new_assigns)}
   end
 
@@ -134,11 +131,8 @@ defmodule LiveViewDemoWeb.Chart do
         <p>Please select the column you want to use to group the rows.</p>
         <%= f = form_for :column_pie_form, "#", [phx_change: :set_pie_column, phx_submit: :make_chart, class: "flex-column"] %>
           <%= select f, :column, columns, prompt: "Select a column", selected: @pie_column, class: "chart-select"%>
-          <div class="row little-margin-top">
+          <div class="little-margin-top">
             <%= submit "Chart it!", class: "blueButton" %>
-            <button class="blueButton greyishButton little-margin-left">
-              Reset
-            </button>
           </div>
         </form>
       </div>

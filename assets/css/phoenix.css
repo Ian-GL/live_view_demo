@@ -58,6 +58,25 @@ select {
   cursor: pointer;
 }
 
+.tables-display {
+  margin-left: 50px;
+}
+
+
+.examples-margin {
+  margin-left: 150px;
+}
+
+.table-name {
+  margin-left: 15px;
+  margin-top: 10px;
+  margin-bottom: 2px;
+}
+
+.small-text {
+  font-size: 12px;
+}
+
 /* CHART SPECIFIC STYLES */
 
 .chart-select {
@@ -188,6 +207,10 @@ select {
   border-color:#bd97e8;
 }
 
+.no-vertical-margin {
+  margin: 0px 20px;
+}
+
 /* CHART STYLES */
 
 .new-chart-container {
@@ -197,6 +220,11 @@ select {
 
 .chart-form-column {
   width: 450px;
+}
+
+.sql-lab-column {
+  width: 550px;
+  max-width: 550px;
 }
 
 /* DASHBOARD STYLES */

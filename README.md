@@ -1,42 +1,19 @@
 # Visualixir
 
-[Visualixir logo](assets/static/images/logo_v1_circle.png "")
+![Visualixir logo](assets/static/images/logo_v1_circle.png "")
 
 This is my entry in [Phoenix Phrenzy](https://phoenixphrenzy.com), showing off what [Phoenix](https://phoenixframework.org/) and [LiveView](https://github.com/phoenixframework/phoenix_live_view) can do.
 
-![App Name Here preview](assets/static/images/preview.gif "App Name Here")
+![Visualixir preview](assets/static/images/preview-chart.gif "Visualixir")
+![Visualixir preview](assets/static/images/preview-sql.gif "Visualixir")
 
-# Phrenzy Instructions
+## About
 
-Fork this repo and start build an application! See [Phoenix Phrenzy](https://phoenixphrenzy.com) for details.
+Visualixir is a visualization tool made with Phoenix LiveView. Currently this
+project is at a very early stage and offers very little options on charts.
 
-Note: for development, you'll need Elixir, Erlang and Node.js. If you use the [asdf version manager](https://github.com/asdf-vm/asdf) and install the [relevant plugins](https://asdf-vm.com/#/plugins-all?id=plugin-list), you can install the versions specified in `.tool-versions` with `asdf install`.
+The purpose of the project is to have a more direct process between the data on
+the backend queried directly form a DB and how it is visualized. Under the hood,
+it queries the data, process it and directly generate the charts using SVG.
 
-
-## Deployment
-
-How you deploy your app is up to you. A couple of the easiest options are:
-
-- Heroku ([instructions](https://hexdocs.pm/phoenix/heroku.html))
-- [Gigalixir](https://gigalixir.com/) (doesn't limit number of connections)
-
-## The Usual README Content
-
-To start your Phoenix server:
-
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.setup`
-  * Install Node.js dependencies with `cd assets && npm install`
-  * Start Phoenix endpoint with `mix phx.server`
-
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
-
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
-
-## Learn more
-
-  * Official website: http://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Mailing list: http://groups.google.com/group/phoenix-talk
-  * Source: https://github.com/phoenixframework/phoenix
+It has been great working with LiveView. There were many "it feels like cheating" moments, followed by others banging head to the wall ones, but the latest were only a few. Although this is not that interactive I hope it does exemplify how a common scenario can be handled with LiveView.

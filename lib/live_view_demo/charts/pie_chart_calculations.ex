@@ -81,7 +81,11 @@ defmodule LiveViewDemo.Charts.PieChartCalculations do
         true -> get_between_limits(point, {-70, 70})
       end
 
-    offset = String.length(label) * 1.8
+    offset =
+      label
+      |> inspect()
+      |> String.length()
+      |> Kernel.*(1.8)
 
     temp_x - offset
   end
