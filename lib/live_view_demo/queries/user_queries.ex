@@ -14,7 +14,7 @@ defmodule LiveViewDemo.Queries.UserQueries do
 
   def get_users_w_most_orders() do
     Order
-    |> select([o, u], [sum(o.items_amount), u.first_name])
+    |> select([o, u], {u.first_name, sum(o.items_amount)})
     |> join(:inner, [o], u in User, on: o.user_id == u.id)
     |> group_by([o, u], u.id)
     |> order_by([o, u], [desc: sum(o.items_amount)])
