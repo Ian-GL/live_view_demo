@@ -33,16 +33,13 @@ defmodule LiveViewDemoWeb.MainDashboard do
           <div class="display-flex">
             <div class="row space-around">
               <a href="/chart" class="db-box">
-                <img src="images/logo_v1_circle.png" width="120" height="120"/>
-                <h3> Charts </h3>
+                <h3 class="box-label"> Charts </h3>
               </a>
               <a href="/examples" class="db-box">
-                <img src="images/logo_v1_circle.png" width="120" height="120"/>
-                <h3> Examples </h3>
+                <h3 class="box-label"> Examples </h3>
               </a>
               <a href="/sql-lab" class="db-box">
-                <img src="images/logo_v1_circle.png" width="120" height="120"/>
-                <h3> SQL Lab </h3>
+                <h3 class="box-label"> SQL Lab </h3>
               </a>
             </div>
           </div>

@@ -4,7 +4,12 @@
 
 This is my entry in [Phoenix Phrenzy](https://phoenixphrenzy.com), showing off what [Phoenix](https://phoenixframework.org/) and [LiveView](https://github.com/phoenixframework/phoenix_live_view) can do.
 
+1. Make charts selecting specific fields of your DB.
+
 ![Visualixir preview](assets/static/images/preview-chart.gif "Visualixir")
+
+2. Make SQL queries and download the results.
+
 ![Visualixir preview](assets/static/images/preview-sql.gif "Visualixir")
 
 ## About

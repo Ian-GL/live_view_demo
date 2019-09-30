@@ -7,8 +7,7 @@ defmodule LiveViewDemoWeb.Chart do
   alias LiveViewDemo.Charts.PieChartCalculations
 
   @chart_type_options [
-    {"Pie", :pie},
-    {"Bar", :bar}
+    {"Pie", :pie}
   ]
 
   @initial_assigns [
@@ -97,6 +96,12 @@ defmodule LiveViewDemoWeb.Chart do
     {:noreply, assign(socket, new_assigns)}
   end
 
+  # def handle_event("set_bar_option", %{"column_pie_form" => %{"column" => column}}, socket) do
+  #   pie_column = if column == "", do: nil, else: column
+  #
+  #   {:noreply, assign(socket, pie_column: pie_column)}
+  # end
+
   defp put_initial_info(socket, tables) do
     assigns = @initial_assigns ++ [tables: tables]
     assign(socket, assigns)
@@ -139,9 +144,24 @@ defmodule LiveViewDemoWeb.Chart do
     """
   end
 
-  defp generate_third_select("bar", _, _, _) do
-    nil
-  end
+  # defp generate_third_select("bar", _, _, _) do
+  #   assigns = nil
+  #   ~L"""
+  #     <div>
+  #       <h4>IMPORTANT. Due to lack of time the bar chart only accepts little customization</h4>
+  #       <p>
+  #         The chart will be a join between users and total amount of orders
+  #         and you may only select which aggregate function you want to use
+  #       </p>
+  #       <%= f = form_for :bar_form, "#", [phx_change: :set_bar_option, phx_submit: :make_chart, class: "flex-column"] %>
+  #         <%= select f, :agg_fun, ["sum", "avg"], prompt: "Select an aggregate function", selected: @agg_fun, class: "chart-select"%>
+  #         <div class="little-margin-top">
+  #           <%= submit "Chart it!", class: "blueButton" %>
+  #         </div>
+  #       </form>
+  #     </div>
+  #   """
+  # end
 
   defp generate_chart(_type, nil), do: nil
 

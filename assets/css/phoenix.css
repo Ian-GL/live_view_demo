@@ -180,7 +180,7 @@ select {
   position: absolute;
   right: 0;
   left: 0;
-  height: 300px;
+  height: 250px;
 }
 
 .row {
@@ -240,21 +240,18 @@ select {
 .db-box {
   border: solid 1px #a8c9e3;
   border-radius: 5px;
-  width: 200px;
-  height: 200px;
+  width: 120px;
+  height: 120px;
   background-color: #daecf0;
 }
 
 .db-box h3 {
   color: #3d3e44;
-}
-
-.db-box img {
-  margin: 15px 0px;
+  margin-top: 50px;
 }
 
 .final-p {
-  margin-top: 350px;
+  margin-top: 300px;
   /* border: solid 1px red; */
 }
 
