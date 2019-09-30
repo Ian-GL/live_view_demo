@@ -55,6 +55,14 @@ defmodule LiveViewDemoWeb.SqlLab do
   end
 
   def handle_event("submit_query", %{"query_form" => %{"query" => query}}, socket) do
+    case QueryExecuter.sanitize(query) do
+      {:error, error} ->
+        {:noreply, assign(socket, result: nil, query: query, error: error)}
+      :ok -> handle_sql_petition(socket, query)
+    end
+  end
+
+  defp handle_sql_petition(socket, query) do
     case QueryExecuter.handle_sql_petition(query) do
       {:ok, result} ->
         formatted_result = QueryExecuter.format_result(result)
@@ -106,8 +114,6 @@ defmodule LiveViewDemoWeb.SqlLab do
   end
 
   defp generate_download_button(columns, rows) do
-    IO.inspect({columns, rows}, label: "------ CHEK THIS ----- ")
-
     csv_content = CsvDownload.format_csv_for_download(columns, rows)
     assigns = nil
 
